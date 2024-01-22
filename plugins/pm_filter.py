@@ -257,12 +257,7 @@ async def next_page(bot, query):
     ])
     btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
-    ])
-    btn.append([
-                        InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                        InlineKeyboardButton("ɴᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
-                    ]) 
+    ]) 
     
     if not settings["button"]:
         curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
@@ -431,12 +426,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     ])
     btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
-    ])
-    btn.append([
-                        InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                        InlineKeyboardButton("ɴᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
-                    ]) 
+    ]) 
     
     
     if not settings["button"]:
@@ -620,11 +610,6 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
     ]) 
-    btn.append([
-                        InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                        InlineKeyboardButton("ɴᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
-                    ])
     
     if not settings["button"]:
         curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
@@ -760,13 +745,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
     ])
     btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
-    ])
-    btn.append([
-                        InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                        InlineKeyboardButton("ɴᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
-                    ])
-     
+    ]) 
     
     if not settings["button"]:
         curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
@@ -1519,7 +1498,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
                     InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
                 ],[
-                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ •', callback_data='shortlink_info')
+                    InlineKeyboardButton('• ɢᴇᴛ ᴀᴅs ғʀᴇᴇ ғɪʟᴇs •', callback_data="shortlink_info")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2052,22 +2031,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "shortlink_info":
-            btn = [[
-                    InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/creatorrio")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.SHORTLINK_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )    
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
@@ -2219,6 +2182,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
         )
         btn.insert(0, [
+            InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
     else:
@@ -2230,6 +2194,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
         )
         btn.insert(0, [
+            InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
     if offset != "":
