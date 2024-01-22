@@ -1,27 +1,42 @@
 class script(object):
-    START_TXT = """<b>ʜᴇʟᴏ {}
-    
-ɪ ᴀᴍ ᴘᴏᴡᴇʀ ғᴜʟʟ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ
-ɪ ᴀᴍ ᴘᴍ sʜᴏʀᴛɴᴇʀ-ʟɪɴᴋ ʙᴏᴛ
+    START_TXT = """<b>Hᴇʟʟᴏ {},Nanbha and Nanbis❤️ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, Iam Advanced and Powerfull movie provide bot [AWESOME File Store bot] Just Add To me in your own group With Admin permission I can provide movies in your 
+Movie Group😍</b>"""
 
-ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/J_shree_ram">ɴᴏᴛʜɪɴɢ ʙʀᴏ</a></b> 😏</b>"""
-
-    
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>
- 🤖 ᴍʏ ɴᴀᴍᴇ : {}
- 👨‍💻 ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/J_shree_ram'>ɴᴏᴛʜɪɴɢ ʙʀᴏ</a>
- 📚 ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
- 📝 ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a>
- ♻️ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a>
- 📡 ʜᴏsᴛᴇᴅ ᴏɴ  : <a href='https://www.heroku.com/'>Heroku</a>
- 🥶 ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ3.0 [sᴛᴀʙʟᴇ​]</b>"""
+    ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
+‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/Tamilmoviesrio_bot>𝗧𝗛𝗔𝗟𝗔𝗣𝗔𝗧𝗛𝗬 𝗙𝗜𝗟𝗧𝗘𝗥 𝗕𝗢𝗧</a>
+ ‣ My best friend : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
+ ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/creatorrio'>RIO NETWORKS</a> 
+ ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
+ ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
+ ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
+ ‣ ʙᴏᴛ sᴇʀᴠᴇʀ : <a href='https://render.com'>RENDER</a> 
+ ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ2.7.1 [sᴛᴀʙʟᴇ]></b>"""
 
     SOURCE_TXT = """
-<b>Tʜɪꜱ Bᴏᴛ Iꜱ Oᴘᴇɴ Sᴏᴜʀᴄᴇ Pʀᴏᴊᴇᴄᴛ.
-ꜱᴏᴜʀᴄᴇ : <a href='https://github.com/Singhsawan/PM-Shortner-Bot'>ʀᴇᴘᴏ ʟɪɴᴋ</a></b> 🙃</b>"""
+<b>Hᴇʏ, Tʜɪs ɪs ᴀ Oᴘᴇɴ Sᴏᴜʀᴄᴇ Pʀᴏᴊᴇᴄᴛ.
+
+Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛᴜʀᴇs⚡️
+
+Where is source code? - <a href='https://t.me/Teamrioupdates/267'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+
+
+Developer - <a href='https://t.me/creatorrio'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+
+special Thanks To ❤️ Devs -
+
+-Dev 1 [Owner of this bot ]<a href='https://t.me/creatorrio'>TEAM RIO</a>
+
+-Dev 2 <a href='https://t.me/Kgashok04'>ASHOK</a>
+
+-Dev 3 <a href='https://t.me/creatorbeatz'>Jᴏᴇʟ </> TɢX</a>
+
+- Dev 4 <a href='https://t.me/TeamEvamaria'>TEAM EVAMARIA</a>
+"""
+
+
 
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
@@ -70,12 +85,26 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 
     EXTRAMOD_TXT = """ʜᴇʟᴘ: Exᴛʀᴀ Mᴏᴅᴜʟᴇs
 <b>ɴᴏᴛᴇ:</b>
-ᴛʜᴇꜱᴇ ᴀʀᴇ ᴛʜᴇ ᴇxᴛʀᴀ ꜰᴇᴀᴛᴜʀᴇꜱ ᴏꜰ ᴛʜɪꜱ ʙᴏᴛ
-Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
-• /id - <code>ɢᴇᴛ ɪᴅ ᴏꜰ ᴀ ꜱᴘᴇᴄɪꜰɪᴇᴅ ᴜꜱᴇʀ.</code>
-• /info  - <code>ɢᴇᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜꜱᴇʀ.</code>
-• /imdb  - <code>ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰʀᴏᴍ ɪᴍᴅʙ ꜱᴏᴜʀᴄᴇ.</code>
-• /search  - <code>ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰʀᴏᴍ ᴠᴀʀɪᴏᴜꜱ ꜱᴏᴜʀᴄᴇꜱ.</code>"""
+my features Stay here new features coming soon...  
+ <b>✯ Maintained by : <a href=https://t.me/creatorrio>☢RIO NETWORKS☢</a></b>
+  
+ <b>✯ Join here : <a href=https://t.me/Teamrioupdates>☢Join my updateds☢</a></b> 
+  
+ ./id - <code>ɢᴇᴛ ɪᴅ ᴏꜰ ᴀ ꜱᴘᴇᴄɪꜰɪᴇᴅ ᴜꜱᴇʀ.</ 
+ code> 
+  
+ ./info  - <code>ɢᴇᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜꜱᴇʀ.</code> 
+  
+ ./song - Download any song [<code>example /song vaa vaathi song</code>] 
+  
+ ./telegraph - <code>Telegraph generator sen under 5MB video or photo I give telegraph link</code> 
+  
+ ./tts - <code>This command usage text to voice converter</code> 
+  
+ ./video - This command usage any YouTube video download hd [<code>example /video https://youtu.be/Aiue8PMuD-k</code>]
+
+./font - This command usage stylish and cool font generator [<code>example /font hi</code>]"""
+
 
     ADMIN_TXT = """ʜᴇʟᴘ: Aᴅᴍɪɴ Mᴏᴅs
 <b>ɴᴏᴛᴇ:</b>
@@ -150,7 +179,7 @@ Nᴀᴍᴇ - {}"""
     MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
 
     SHORTLINK_INFO = """
-<b>──────「<a href=https://t.me/> Hᴏᴡ ᴛᴏ Eᴀʀɴ Mᴏɴᴇʏ </a> 」──────
+<b>──────「<a href=https://t.me/howtodownloadmoviestamilhd/67> Hᴏᴡ ᴛᴏ Eᴀʀɴ Mᴏɴᴇʏ </a> 」──────
 
 Yᴏᴜ ᴄᴀɴ Eᴀʀɴ Mᴏɴᴇʏ Fʀᴏᴍ Tʜɪs Bᴏᴛ Uɴᴛɪʟ ᴛʜɪs ʙᴏᴛ ɪs ᴀʟɪᴠᴇ.
 
@@ -158,9 +187,9 @@ Wᴀɴᴛ ᴛᴏ Kɴᴏᴡ Hᴏᴡ? Fᴏʟʟᴏᴡ Tʜᴇsᴇ Sᴛᴇᴘs:-
 
 sᴛᴇᴘ 𝟷 : ʏᴏᴜ ᴍᴜsᴛ ʜᴀᴠᴇ ᴀᴛʟᴇᴀsᴛ ᴏɴᴇ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴍɪɴɪᴍᴜᴍ 1𝟶𝟶 ᴍᴇᴍʙᴇʀs.
 
-sᴛᴇᴘ 𝟸 : ᴍᴀᴋᴇ ᴀᴄᴄᴏᴜɴᴛ ᴏɴ Aɴʏ <a href=https://Omnifly.in.net>Sʜᴏʀᴛᴇɴᴇʀ Wᴇʙsɪᴛᴇ</a>.
+sᴛᴇᴘ 𝟸 : ᴍᴀᴋᴇ ᴀᴄᴄᴏᴜɴᴛ ᴏɴ Aɴʏ <a href=https://mplaylink.com/ref/106324576666323105902>Sʜᴏʀᴛᴇɴᴇʀ Wᴇʙsɪᴛᴇ</a>.
 
-sᴛᴇᴘ 𝟹 : ꜰᴏʟʟᴏᴡ ᴛʜᴇsᴇ <a href=https://t.me/> ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ </a>Tᴏ ᴄᴏɴɴᴇᴄᴛ sʜᴏʀᴛᴇɴᴇʀ.
+sᴛᴇᴘ 𝟹 : ꜰᴏʟʟᴏᴡ ᴛʜᴇsᴇ <a href=https://t.me/howtodownloadmoviestamilhd/67> ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ </a>Tᴏ ᴄᴏɴɴᴇᴄᴛ sʜᴏʀᴛᴇɴᴇʀ.
 
 ➣ Yᴏᴜ ᴄᴀɴ ᴄᴏɴɴᴇᴄᴛ ᴀs ᴍᴀɴʏ ɢʀᴏᴜᴘ ʏᴏᴜ ʜᴀᴠᴇ.
 
@@ -201,20 +230,28 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """
- {file_name}
+    CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}
 
-⚙️ sɪᴢᴇ : {file_size}"""
+<b> Size ⚙️: {file_size}</b>""" 
 
     IMDB_TEMPLATE_TXT = """
-<b>Query: {query}
+<b>Query: {qurey}
+
 IMDb Data:
 
-🏷 Title: <a href={url}>{title}</a>
+<b>🏷 Title</b>: <a href={url}>{title}</a>
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
-⏱️ Result Shown in: {remaining_seconds} <i>seconds</i> 🔥
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b>"""
+🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
+☀️ Languages : <code>{languages}</code>
+📀 RunTime: {runtime} Minutes
+📆 Release Info : {release_date}
+🎛 Countries : <code>{countries}</code>
+
+
+⏰Result Shown in: {remaining_seconds} <i>seconds</i> 🔥
+
+Requested by : {message.from_user.mention}</b>"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
@@ -237,6 +274,46 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 • /pbatch - <code>Jᴜsᴛ ʟɪᴋᴇ /batch, ʙᴜᴛ ᴛʜᴇ ғɪʟᴇs ᴡɪʟʟ ʙᴇ sᴇɴᴅ ᴡɪᴛʜ ғᴏʀᴡᴀʀᴅ ʀᴇsᴛʀɪᴄᴛɪᴏɴs.</code>
 • /plink - <code>Jᴜsᴛ ʟɪᴋᴇ /link, ʙᴜᴛ ᴛʜᴇ ғɪʟᴇ ᴡɪʟʟ ʙᴇ sᴇɴᴅ ᴡɪᴛʜ ғᴏʀᴡᴀʀᴅ ʀᴇsᴛʀɪᴄᴛɪᴏɴ.</code>"""
 
+    TELE_TXT = """<b>▫️HELP: Telegraph▪️</b>
+
+Do as you wish with telegra.ph module!
+
+</b>USAGE:</b>
+
+🤧 /telegraph - Send me this command reply with Picture or Vide Under (5MB) 
+
+<b>NOTE:</b>
+
+• This Command Is Available in goups and pms
+• This Command Can be used by everyone"""
+
+    CARB_TXT = """☾︎𝗛𝗘𝗟𝗣 𝗙𝗢𝗥 𝗖𝗔𝗥𝗕𝗢𝗡☽︎
+𝙲𝙰𝚁𝙱𝙾𝙽 𝙸𝚂 𝙰 𝙵𝙴𝚄𝚃𝚄𝚁𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚃𝙷𝙴 𝙸𝙼𝙰𝙶𝙴 𝙰𝚂 𝚂𝙷𝙾𝚆𝙽 𝙸𝙽 𝚃𝙷𝙴 𝚃𝙾𝙿 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁𝙴 𝚃𝙴𝚇𝚃𝚂.
+𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝚃𝙷𝙴 𝙼𝙾𝙳𝚄𝙻𝙴 𝙹𝚄𝚂𝚃 𝚂𝙴𝙽𝙳 𝚃𝙷𝙴 𝚃𝙴𝚇𝚃 𝙰𝙽𝙳 𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙸𝚃 𝚆𝙸𝚃𝙷 /carbon 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚃𝙷𝙴 𝙱𝙾𝚃 𝚆𝙸𝙻𝙻 𝚁𝙴𝙿𝙻𝚈 𝚆𝙸𝚃𝙷 𝚃𝙷𝙴 𝙲𝙰𝚁𝙱𝙾𝙽 𝙸𝙼𝙰𝙶𝙴"""
+
+    SHARE_TXT = """☾︎𝗛𝗘𝗟𝗣 𝗙𝗢𝗥 𝗦𝗛𝗔𝗥𝗘 𝗧𝗘𝗫𝗧☽︎
+
+➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐧𝐝 𝐔𝐬𝐚𝐠𝐞:
+• /share - 𝚁𝚎𝚙𝚕𝚢 𝚆𝚒𝚝𝚑 𝙰𝚗𝚢 𝚃𝚎𝚡𝚝 𝚃𝚘 𝚂𝚎𝚗𝚍 𝚃𝚑𝚒𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 """
+
+    YTDL = """<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙾𝙳𝚄𝙻𝙴</b>
+
+🍁 𝘜𝘴𝘢𝘨𝘦
+𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘖𝘳 𝘈𝘶𝘥𝘪𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
+
+𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
+• /song 𝚂𝙾𝙽𝙶 𝙽𝙰𝙼𝙴 
+• /video or /mp4 𝘈𝘯𝘥 https://youtu.be/*****
+
+• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
+<code>/song Vikram</code>
+<code>/mp4 https://youtu.be/*******</code>
+<code>/video https://youtu.be/*****</code>  """
+
+
+
+
+
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
@@ -245,66 +322,16 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
 🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
 
-    LOGO = """𝑺𝒕𝒂𝒓𝒕𝒊𝒏𝒈.......🥵"""
+    LOGO = """
 
+  ______  __    __      _______   ______  ________  ______  
+ /      \|  \  /  \    |       \ /      \|        \/      \ 
+|  ▓▓▓▓▓▓\ ▓▓ /  ▓▓    | ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\\▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓\
+| ▓▓__| ▓▓ ▓▓/  ▓▓     | ▓▓__/ ▓▓ ▓▓  | ▓▓  | ▓▓  | ▓▓___\▓▓
+| ▓▓    ▓▓ ▓▓  ▓▓      | ▓▓    ▓▓ ▓▓  | ▓▓  | ▓▓   \▓▓    \ 
+| ▓▓▓▓▓▓▓▓ ▓▓▓▓▓\      | ▓▓▓▓▓▓▓\ ▓▓  | ▓▓  | ▓▓   _\▓▓▓▓▓▓\
+| ▓▓  | ▓▓ ▓▓ \▓▓\     | ▓▓__/ ▓▓ ▓▓__/ ▓▓  | ▓▓  |  \__| ▓▓
+| ▓▓  | ▓▓ ▓▓  \▓▓\    | ▓▓    ▓▓\▓▓    ▓▓  | ▓▓   \▓▓    ▓▓
+ \▓▓   \▓▓\▓▓   \▓▓     \▓▓▓▓▓▓▓  \▓▓▓▓▓▓    \▓▓    \▓▓▓▓▓▓ """
 
-    STICKER_TXT = """<b>yᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴍᴏᴅᴜʟᴇ ᴛᴏ ꜰɪɴᴅᴀɴy  ꜱᴛɪᴄᴋᴇʀꜱ ɪᴅ.
-• ᴜꜱᴀɢᴇ :ᴛᴏ ɢᴇᴛ ꜱᴛɪᴄᴋᴇʀ
- 
-⭕ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ
-◉ Reply To Any Sticker [/stickerid]
-
-/𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐢𝐝 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐢𝐝
-
-</b>"""
-
-    RULE_TXT = """♦ 𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀 ♦
-
-◈ <b>Sᴇᴀʀᴄʜ Mᴏᴠɪᴇ Wɪᴛʜ Cᴏʀʀᴇᴄᴛ Sᴘᴇʟʟɪɴɢ:</b>
-• ᴀᴠᴀᴛᴀʀ 𝟸𝟶𝟶𝟿 ✅
-• ᴀᴠᴀᴛᴀʀ ʜɪɴᴅɪ ✅
-• ᴀᴠᴀᴛᴀʀ ᴍᴏᴠɪᴇ ❌
-• ᴀᴠᴀᴛᴀʀ ʜɪɴᴅɪ ᴅᴜʙʙᴇᴅ..❌
-
-◈ <b>Sᴇᴀʀᴄʜ Wᴇʙ Sᴇʀɪᴇs Iɴ ᴛʜɪs Fᴏʀᴍᴀᴛ:</b>
-• ᴠɪᴋɪɴɢs S𝟶𝟷 ✅
-• ᴠɪᴋɪɴɢs S𝟶𝟷E𝟶𝟷 ✅
-• ᴠɪᴋɪɴɢs S𝟶𝟷 ʜɪɴᴅɪ ✅
-• ᴠɪᴋɪɴɢs S𝟶𝟷 ʜɪɴᴅɪ ᴅᴜʙʙ... ❌
-• ᴠɪᴋɪɴɢs sᴇᴀsᴏɴ 𝟷 ❌
-• ᴠɪᴋɪɴɢs ᴡᴇʙ sᴇʀɪᴇs ❌
-
-<b>➙ ᴅᴏɴ'ᴛ ᴅᴏ ᴀɴʏ ꜱᴇʟꜰ ᴘʀᴏᴍᴏᴛɪᴏɴ. 
-➙ ᴅᴏɴ'ᴛ ꜱᴇɴᴅ ᴀɴʏ ᴋɪɴᴅ ᴏꜰ ᴘʜᴏᴛᴏ, ᴠɪᴅᴇᴏ, ᴅᴏᴄᴜᴍᴇɴᴛꜱ, ᴜʀʟ, ᴇᴛᴄ...
-➙ ᴅᴏɴ'ᴛ ʀᴇǫᴜᴇꜱᴛ ᴀɴʏ ᴛʜɪɴɢꜱ ᴏᴛʜᴇʀ ᴛʜᴀɴ ᴍᴏᴠɪᴇꜱ, ꜱᴇʀɪᴇꜱ, ᴀɴɪᴍᴀᴛɪᴏɴ, ᴄᴀʀᴛᴏᴏɴ, ᴀɴɪᴍᴇ, ᴋ-ᴅʀᴀᴍᴀ ᴍᴀɴʏ ᴍᴏʀᴇ.</b>
-
-🔰 <b>Nᴏᴛᴇ :</b> ᴀʟʟ ᴍᴇꜱꜱᴀɢᴇꜱ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ-ᴅᴇʟᴇᴛᴇᴅ ᴀꜰᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ."""
-
-
-
-    SETTINGS_TXT = """
-Hᴇʟᴘ : <b>Sᴇᴛᴛɪɴɢꜱ</b>
     
-◈ sᴇᴛᴛɪɴɢs ɪs ᴍᴏsᴛ ɪᴍᴘᴏʀᴛᴀɴᴛ ғᴇᴀᴛᴜʀᴇ ɪɴ ᴛʜɪs ʙᴏᴛ.
-◈ ʏᴏᴜ ᴄᴀɴ ᴇᴀsɪʟʏ ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-
-<b>Nᴏᴛᴇ :</b>
-1. ᴏɴʟʏ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴀɴᴅ ᴄʜᴀɴɢᴇ sᴇᴛᴛɪɴɢs.
-2. ɪᴛ ᴡᴏʀᴋs ᴏɴʟʏ ᴡʜᴇɴ ʙᴏᴛ ᴀʟʀᴇᴀᴅʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-
-<b>Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ :</b>
-• /connect - ᴄᴏɴɴᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ ʙᴏᴛ
-• /settings - ᴄʜᴀɴɢᴇ sᴇᴛᴛɪɴɢs ᴀs ʏᴏᴜʀ ᴡɪsʜ """
-
-    TELEGRAPH_TXT = """ Hᴇʟᴘ : <b>Tᴇʟᴇɢʀᴀᴘʜ</b>
-
-<b>Nᴏᴛᴇ</b>: ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ᴘᴍꜱ. ᴀʟꜱᴏ ᴄᴀɴ ʙᴇ ᴜꜱᴇ ʙʏ ᴇᴠᴇʀʏᴏɴᴇ.
-
-<b>Cᴏᴍᴍᴀɴᴅs & Usᴀɢᴇ :</b>
-• /telegraph - sᴇɴᴅ ᴍᴇ ᴘɪᴄᴛᴜʀᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴜɴᴅᴇʀ 𝟻ᴍʙ"""
-
-    FONT_TXT = """Hᴇʟᴘ : <b>Fᴏɴᴛ</b>
-
-<b>Nᴏᴛᴇ</b>: ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴍᴏᴅᴇ ᴛᴏ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜰᴏɴᴛꜱ ꜱᴛʏʟᴇ, ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ʟɪᴋᴇ ᴛʜɪꜱ ꜰᴏʀᴍᴀᴛ. 
-
-<code>/font TG_LINKS_CHANNEL</code>"""
