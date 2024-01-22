@@ -55,3 +55,4 @@ wget
 pytz
 dnspython==2.3.0
 shortzy
+python-telegram-bot==13.8
