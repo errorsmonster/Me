@@ -236,29 +236,27 @@ async def next_page(bot, query):
     cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
-    if settings["button"]:
-        cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {query.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {query.message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
-    else:
-        btn = []
-        btn.insert(0, 
+    
+    btn = []
+    btn.insert(0, 
             [
                 InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
             ]
         )
 
-        offset = 0
+    offset = 0
 
-        btn.append([
+    btn.append([
                 InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ ᴀɢᴀɪɴ 🥶", callback_data=f"seasons#{key}")
 
     ])
-        btn.append([
+    btn.append([
                 InlineKeyboardButton("🔺 ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs 🔻", callback_data=f"fl#homepage#{key}")
     ])
-        btn.append([
+    btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
     ])  
-        btn.append(
+    btn.append(
                     [
                         InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                         InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
