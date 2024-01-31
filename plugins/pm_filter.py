@@ -400,7 +400,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
     else:
         btn = []
-        btn.insert(0, 
+        btn.append(0, 
             [
                 InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
             ]
@@ -760,7 +760,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         ]
     else:
         btn = []
-        btn.insert(0, 
+        btn.append(0, 
             [
                 InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
             ]
@@ -2233,7 +2233,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-        btn.append(0, [
+        btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
@@ -2245,7 +2245,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-        btn.append(0, [
+        btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
