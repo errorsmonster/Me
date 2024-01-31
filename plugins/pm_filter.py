@@ -399,13 +399,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     else:
-        btn.insert(0, 
-            [
+        btn = []
+    btn.append(0, [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
-            ]
-        )
-    btn.insert(0, [
+        ])
+    btn.append(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ]) 
