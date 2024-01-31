@@ -240,13 +240,13 @@ async def next_page(bot, query):
             cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
     else:
         btn = []
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-    btn.append(0, [
+        btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ]) 
@@ -420,13 +420,13 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     else:
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-    btn.append(0, [
+    btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ]) 
@@ -615,13 +615,13 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         ]
     else:
         btn = []
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-    btn.append(0, [
+    btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ]) 
@@ -763,13 +763,13 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         ]
     else:
         btn = []
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-    btn.append(0, [
+    btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ]) 
@@ -2222,25 +2222,25 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-        btn.append(0, [
+        btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
     else:
         btn = []
-        btn.append(0, 
+        btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
             ]
         )
-        btn.append(0, [
+        btn.insert(0, [
             InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
         ])
