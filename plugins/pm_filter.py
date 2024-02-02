@@ -579,17 +579,12 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         ]
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴ ‼️", callback_data=f"languages#{key}"),
-            ]
-        )
-
     offset = 0
-
+    btn.append([
+                InlineKeyboardButton("‼️ LAAN ‼️", callback_data=f"languages#{key}"),
+    ])
     btn.append([
     InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ ᴀɢᴀɪɴ 🥶", callback_data=f"seasons#{key}")
-
     ])
     btn.append([
     InlineKeyboardButton("🔺 ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs 🔻", callback_data=f"fl#homepage#{key}")
