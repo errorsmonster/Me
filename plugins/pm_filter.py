@@ -581,7 +581,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = []
     offset = 0
     btn.append([
-                InlineKeyboardButton("‼️ LAAN ‼️", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("‼️ Cʜᴏᴇ ‼️", callback_data=f"languages#{key}"),
     ])
     btn.append([
     InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ ᴀɢᴀɪɴ 🥶", callback_data=f"seasons#{key}")
@@ -611,7 +611,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     else:
         btn.append(
             [InlineKeyboardButton(text="𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄",callback_data="pages")]
-        ) 
+        )
     
     if not settings["button"]:
         curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
