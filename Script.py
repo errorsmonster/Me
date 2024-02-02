@@ -283,7 +283,7 @@ Do as you wish with telegra.ph module!
 
     RULE_TXT = """
     
-    ♦ 𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀 ♦
+     𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀 
 
 ◈ <b>Sᴇᴀʀᴄʜ Mᴏᴠɪᴇ Wɪᴛʜ Cᴏʀʀᴇᴄᴛ Sᴘᴇʟʟɪɴɢ:</b>
 • ᴀᴠᴀᴛᴀʀ 𝟸𝟶𝟶𝟿 ✅
