@@ -47,6 +47,12 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://akmonsterprogrammer:S.
 DATABASE_NAME = environ.get('DATABASE_NAME', "newmrak")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
+#stream feauter
+STREAM_BIN = environ.get("STREAM_BIN", "-1002053122232") #Log channel/Bin Channel id -100xxxxxxx
+STREAM_URL = environ.get("STREAM_URL", "") # https://example.com/ (Your Stream Url)
+IS_STREAM = bool(STREAM_BIN and STREAM_URL)
+#Use this feature, if you have deployed file to link bot. paste the app url with stream url and add filter bot as admin in bin channel and add id in stream bin
+
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/Howto_openlink_0')
