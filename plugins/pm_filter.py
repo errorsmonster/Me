@@ -580,7 +580,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     else:
         btn = []
     offset = 0
-    btn.append([
+    btn.insert([
                 InlineKeyboardButton("‼️ Cʜᴏᴇ ‼️", callback_data=f"languages#{key}"),
     ])
     btn.append([
@@ -729,25 +729,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     else:
-        btn = []
-        btn.append(0, 
-            [
-                InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
-            ]
-        )
-
-    offset = 0
-
-    btn.append([
-    InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ ᴀɢᴀɪɴ 🥶", callback_data=f"seasons#{key}")
-
-    ])
-    btn.append([
-    InlineKeyboardButton("🔺 ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs 🔻", callback_data=f"fl#homepage#{key}")
-    ])
-    btn.append([
-    InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
-    ]) 
+        btn = [] 
     if offset != "":
         try:
             if settings['max_btn']:
