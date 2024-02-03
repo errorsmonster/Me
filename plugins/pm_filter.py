@@ -142,7 +142,10 @@ async def next_page(bot, query):
     #         ]
     #         for file in files
     #     ]
-
+        btn.insert(0,
+                   [
+                InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", url = "https://t.me/MrAK_LinkZz/5")
+                   ])
         btn.insert(0, 
             [
                 InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
@@ -382,14 +385,14 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = []
     offset = 0
     btn.append([
-                InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
+    InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{key}"),
     ])
     btn.append([
     InlineKeyboardButton("🔵 Sᴇᴀsᴏɴs 🔵", callback_data=f"seasons#{key}")
     ])
     btn.append([
-    InlineKeyboardButton("🔺 ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs 🔻", callback_data=f"fl#homepage#{key}")
-    ])
+    InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", url = "https://t.me/MrAK_LinkZz/5")
+                ])
     btn.append([
     InlineKeyboardButton("Quality", callback_data=f"qualities#{key}")
     ]) 
@@ -1898,9 +1901,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-    elif query.data == "htd":
-        await query.answer(text=script.HOW_TO_DOWNLOAD, show_alert=True)
-
     elif query.data == "rule":
             buttons = [[
                     InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="help")
@@ -2187,7 +2187,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
         btn.insert(0, 
                    [
-                       InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", callback_data='htd')
+                       InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", url = "https://t.me/MrAK_LinkZz/5")
                     ])
         btn.insert(0, 
             [
@@ -2203,7 +2203,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = []
         btn.insert(0, 
                    [
-                       InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", callback_data='htd')
+                       InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", url = "https://t.me/MrAK_LinkZz/5")
                     ])
         btn.insert(0, 
             [
