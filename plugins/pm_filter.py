@@ -1132,13 +1132,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("Join our Backup channel mahnn! 😒", show_alert=True)
             return
-        try:
-            ident, kk, file_id = query.data.split("#", 2)
-        except ValueError:
+        parts = query.data.split("#")
+        if len(parts) >= 2:
+            ident, kk, file_id = parts[0], parts[1], parts[2] if len(parts) > 2 else None
+            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={kk}_{file_id}")
+        else:
             logger.error("Failed to unpack values from query data: {}".format(query.data))
         return
-        await query.answer(url=f"https://t.me/{temp.U_NAME}?start={kk}_{file_id}")
-    
     elif query.data == "pages":
         await query.answer()
     
