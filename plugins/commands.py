@@ -25,7 +25,7 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('👻 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MrAK_LinkZz"),
+                    InlineKeyboardButton('👻 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/i_Movieee"),
                     InlineKeyboardButton('🫨 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('🔻 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔻', url=CHNL_LNK)
@@ -79,13 +79,14 @@ async def start(client, message):
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
-                pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("↺ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_message(
+                btn.append([InlineKeyboardButton("↺ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+        await client.send_photo(
+            photo = "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg",
             chat_id=message.from_user.id,
-            text="**Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴅᴏɴ'ᴛ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ...\n\nIғ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ Tʀʏ Aɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...\n\nTʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇs...**",
+            # text="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            caption=script.FORCE_SUB,
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -151,7 +152,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("✨ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴘ✨", url="https://t.me/+1xujDl3NzN02N2Jl")
+                          InlineKeyboardButton("✨ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴘ✨", url="https://t.me/+4nzja42ELQwzOWVl")
                          ]
                         ]
                     )
@@ -167,7 +168,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("✨ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴘ✨", url="https://t.me/+1xujDl3NzN02N2Jl")
+                          InlineKeyboardButton("✨ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴘ✨", url="https://t.me/+4nzja42ELQwzOWVl")
                          ]
                         ]
                     )
@@ -260,7 +261,7 @@ async def start(client, message):
                     [
                         InlineKeyboardButton('📁 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=g)
                     ], [
-                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url= "https://t.me/MrAK_LinkZz/5")
+                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
@@ -281,7 +282,7 @@ async def start(client, message):
                     [
                         InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)
                     ], [
-                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url= "https://t.me/MrAK_LinkZz/5")
+                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
@@ -332,7 +333,7 @@ async def start(client, message):
                             [
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
-                                InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
+                                InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/i_Movieee")
                             ]
                         ]
                     )
@@ -340,7 +341,7 @@ async def start(client, message):
                     else InlineKeyboardMarkup(
                         [
                         [
-                          InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
+                          InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/i_Movieee")
                          ]
                         ]
                     )
@@ -366,7 +367,7 @@ async def start(client, message):
                         [
                             InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)
                         ], [
-                            InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url= "https://t.me/MrAK_LinkZz/5")
+                            InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
@@ -400,7 +401,7 @@ async def start(client, message):
                             [
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
-                                InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
+                                InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/i_Movieee")
                             ]
                         ]
                     )
@@ -408,7 +409,7 @@ async def start(client, message):
                     else InlineKeyboardMarkup(
                         [
                         [
-                          InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
+                          InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/i_Movieee")
                          ]
                         ]
                     )
@@ -416,7 +417,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '@i_Movieee ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -425,8 +426,6 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
-            await asyncio.sleep(300)
-            k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)            
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
@@ -436,7 +435,7 @@ async def start(client, message):
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '@i_Movieee ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -446,7 +445,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"@i_Movieee {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
                 InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
@@ -473,8 +472,6 @@ async def start(client, message):
                     )
                     )
     )
-    await asyncio.sleep(300)
-    k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
