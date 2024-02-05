@@ -1096,7 +1096,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"⚜️{files.file_name}"
         await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
 
-    elif query.data.startswith("gen_stream_link"):
+async def get_shortlink(link):
+    if query.data.startswith("gen_stream_link"):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
