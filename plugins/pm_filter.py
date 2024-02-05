@@ -766,6 +766,8 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
+ async def get_shortlink(link):
+
     # link = await client.create_chat_invite_link(int(REQST_CHANNEL))
     if query.data == "close_data":
         await query.message.delete()
@@ -1096,8 +1098,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"⚜️{files.file_name}"
         await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
 
-async def get_shortlink(link):
-    if query.data.startswith("gen_stream_link"):
+    elif query.data.startswith("gen_stream_link"):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
