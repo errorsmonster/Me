@@ -1105,21 +1105,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 chat_id=int(STREAM_BIN),
                 file_id=file_id,
             )
-            if data.startswith("files"):
-                user = message.from_user.id
-                if temp.SHORT.get(user)==None:
-                    await message.reply_text(text="<b>Please Search Again in Group</b>")
-                else:
-                     chat_id = temp.SHORT.get(user)
-                settings = await get_settings(chat_id)
-                if settings['is_shortlink'] and user not in PREMIUM_USER:
-                    files_ = await get_file_details(file_id)
-                    files = files_[0]
-                    g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-
-                    fileName = {quote_plus(get_name(log_msg))}
-                    page_link = await get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
-                    stream_link = await get_shortlink(chat_id,  f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            fileName = {quote_plus(get_name(log_msg))}
+            page_link = await get_shortlink(f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            stream_link = await get_shortlink( f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
             g = await query.message.reply_text("<b>Link Generating...</b>")
             await asyncio.sleep(1)
