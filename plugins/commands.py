@@ -265,7 +265,7 @@ async def start(client, message):
                 ]
             )
         )
-        await asyncio.sleep(300)
+        await asyncio.sleep(60)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
         
@@ -425,7 +425,7 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
-            await asyncio.sleep(300)
+            await asyncio.sleep(60)
             k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
@@ -473,12 +473,15 @@ async def start(client, message):
                     )
                     )
     )
+    btn = [[
+    InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+           ]]
     k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(300)
+    await asyncio.sleep(60)
     btn = [[
-        InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
-    ]]
+    InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+          ]]
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
     return   
 
