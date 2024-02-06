@@ -376,8 +376,6 @@ async def start(client, message):
             return
     user = message.from_user.id
     files_ = await get_file_details(file_id)
-    
-    files = files_[0]
     title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
