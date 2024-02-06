@@ -374,8 +374,18 @@ async def start(client, message):
             await asyncio.sleep(1200)
             await k.edit("<b>Your message is successfully deleted!!!</b>")
             return
-    user = message.from_user.id
-    files_ = await get_file_details(file_id)           
+    files = files_[0]
+    title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    size=get_size(files.file_size)
+    f_caption=files.caption
+    if CUSTOM_FILE_CAPTION:
+        try:
+            f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+        except Exception as e:
+            logger.exception(e)
+            f_caption=f_caption
+    if f_caption is None:
+        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
@@ -446,9 +456,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
-        size=get_size(files.file_size)
-        f_caption=files.caption
+        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
                 InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
