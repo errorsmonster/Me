@@ -330,7 +330,7 @@ async def start(client, message):
                     InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
+                                InlineKeyboardButton('🌈 ɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
                                 InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
                             ]
@@ -398,7 +398,7 @@ async def start(client, message):
                     InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
+                                InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ  🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
                                 InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
                             ]
@@ -467,7 +467,7 @@ async def start(client, message):
                     InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}')
+                                InlineKeyboardButton('🌈 Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}')
                             ]
                         ]
                     )
