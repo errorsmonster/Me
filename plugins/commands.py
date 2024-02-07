@@ -265,7 +265,7 @@ async def start(client, message):
                 ]
             )
         )
-        await asyncio.sleep(60)
+        await asyncio.sleep(300)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
         
@@ -414,18 +414,7 @@ async def start(client, message):
                     )
                )
             )
-            filetype = msg.media
-            file = getattr(msg, filetype.value)
-            title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
-            size=get_size(file.file_size)
-            f_caption = f"<code>{title}</code>"
-            if CUSTOM_FILE_CAPTION:
-                try:
-                    f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
-                except:
-                    return
-            await msg.edit_caption(f_caption)
-            await asyncio.sleep(60)
+            await asyncio.sleep(300)
             k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
@@ -473,15 +462,12 @@ async def start(client, message):
                     )
                     )
     )
-    btn = [[
-    InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
-           ]]
     k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(60)
+    await asyncio.sleep(300)
     btn = [[
-    InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
-          ]]
+        InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+    ]]
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
     return   
 
