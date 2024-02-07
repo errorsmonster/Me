@@ -1100,6 +1100,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
+            user = message.from_user.id
             username =  query.from_user.mention 
             log_msg = await client.send_cached_media(
                 chat_id=int(STREAM_BIN),
