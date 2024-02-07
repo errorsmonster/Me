@@ -1100,40 +1100,39 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
-            username = query.from_user.id
+            username =  query.from_user.mention 
             log_msg = await client.send_cached_media(
-                chat_id=int(-1002053122232),
+                chat_id=int(STREAM_BIN),
                 file_id=file_id,
             )
-            chat_id = temp.SHORT.get(user_id)  # Fix: use user_id instead of user
+            chat_id = temp.SHORT.get(user)
             settings = await get_settings(chat_id)
-            if settings['is_shortlink'] and user_id not in PREMIUM_USER:
-                fileName = {quote_plus(get_name(log_msg))}
-                page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
-                stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+       
+            fileName = {quote_plus(get_name(log_msg))}
+            page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
-                g = await query.message.reply_text("<b>Link Generating...</b>")
-                await asyncio.sleep(1)
-                await g.delete()
+            g = await query.message.reply_text("<b>Link Generating...</b>")
+            await asyncio.sleep(1)
+            await g.delete()
 
-                await log_msg.reply_text(
-                    text=f"Usᴇʀ ID: {user_id}\n\nUsᴇʀ Nᴀᴍᴇ: {username} 𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞: {fileName}",
-                    quote=True,
-                    disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
+            await log_msg.reply_text(
+                text=f"Usᴇʀ ID: {user_id}\n\nUsᴇʀ Nᴀᴍᴇ: {username} 𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞: {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
                                                     InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)]]))
-                return await query.message.reply_text(
-                    text="<b>Sᴛʀᴇᴀᴍ Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ...😁</b>",
-                    quote=True,
-                    disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
+            return await query.message.reply_text(
+                text="<b>Sᴛʀᴇᴀᴍ Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ...😁</b>",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
                                                     InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)]]))
         except Exception as e:
             print(e)  # print the error message
             await query.answer(f"☣something went wrong. Check error:\n\n{e}", show_alert=True)
             return
         return
-
     
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
