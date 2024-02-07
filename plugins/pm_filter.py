@@ -1105,11 +1105,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 chat_id=int(STREAM_BIN),
                 file_id=file_id,
             )
-            fileName = {quote_plus(get_name(log_msg))}
-            page_link = f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-            stream_link = f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            chat_id = temp.SHORT.get(user)
+            settings = await get_settings(chat_id)
+            if settings['is_shortlink'] and user not in PREMIUM_USER:
+                fileName = {quote_plus(get_name(log_msg))}
+                page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+                stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
-            g = await query.message.reply_text("<b>Link Generating...</b>")
+                g = await query.message.reply_text("<b>Link Generating...</b>")
             await asyncio.sleep(1)
             await g.delete()
 
@@ -2323,7 +2326,7 @@ async def auto_filter(client, msg, spoll=False):
         except Exception as e:
             logger.exception(e)
             m=await message.reply_text("🔎") 
-            fek = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
             await m.delete()
             try:
                 if settings['auto_delete']:
@@ -2336,7 +2339,7 @@ async def auto_filter(client, msg, spoll=False):
                 await fek.delete()
                 await message.delete()
     else:
-        fuk = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
         await m.delete()
         try:
             if settings['auto_delete']:
