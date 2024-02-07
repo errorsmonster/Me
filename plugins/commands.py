@@ -375,16 +375,20 @@ async def start(client, message):
             await k.edit("<b>Your message is successfully deleted!!!</b>")
             return
     user = message.from_user.id
-    files_ = await get_file_details(file_id)           
+    files_ = await get_file_details(file_id)
 
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files_.file_name.split()))
         size = get_size(files_.file_size)
         f_caption = files_.caption
-    
+
         if CUSTOM_FILE_CAPTION:
-            f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+            title = '' if title is None else title
+            size = '' if size is None else size
+            f_caption = '' if f_caption is None else f_caption
+
+            f_caption = CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
         else:
             f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files_.file_name.split()))}"
 
@@ -411,19 +415,19 @@ async def start(client, message):
                 reply_markup=(
                     InlineKeyboardMarkup(
                         [
-                            [
+                        [
                             InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
-                            ],[
+                        ], [
                             InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
-                            ]
+                        ]
                         ]
                     )
                     if IS_STREAM
                     else InlineKeyboardMarkup(
                         [
-                            [
+                        [
                             InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
-                            ]
+                        ]
                         ]
                     )
                 )
@@ -441,6 +445,7 @@ async def start(client, message):
             pass
 
         return await message.reply('No such file exists.')
+
  
 
     files = files_[0]
