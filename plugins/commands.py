@@ -376,21 +376,23 @@ async def start(client, message):
             return
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
+
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
-        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files_.file_name.split()))}"    
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                        InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                        InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url=HOW_TO_VERIFY)
-                        ]]
+                InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url=HOW_TO_VERIFY)
+            ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
-                    reply_markup=InlineKeyboardMarkup(btn)
-                )
+            text="<b>You are not verified!\nKindly verify to continue!</b>",
+                protect_content=True,
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
                 return
+
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
@@ -409,23 +411,27 @@ async def start(client, message):
                     if IS_STREAM
                     else InlineKeyboardMarkup(
                         [
-                        [
-                          InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
-                         ]
+                            [
+                                InlineKeyboardButton("✨ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ✨", url="https://t.me/MrAK_LinkZz")
+                            ]
                         ]
                     )
-               )
+                )
             )
+
             await asyncio.sleep(300)
             k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
             btn = [[
-                InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+            InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
             return
+
         except:
             pass
-        return await message.reply('No such file exist.')
+    
+        return await message.reply('No such file exists.')
+
     files = files_[0]
     title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
