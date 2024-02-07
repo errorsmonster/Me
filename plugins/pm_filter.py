@@ -1105,12 +1105,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 chat_id=int(STREAM_BIN),
                 file_id=file_id,
             )
-            chat_id = temp.SHORT.get(user_id)
-            settings = await get_settings(chat_id)
-            if settings['is_shortlink'] and user_id not in PREMIUM_USER:
-             fileName = {quote_plus(get_name(log_msg))}
-             page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
-             stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            fileName = {quote_plus(get_name(log_msg))}
+            page_link = get_shortlink(user_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            stream_link = get_shortlink(user_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
             g = await query.message.reply_text("<b>Link Generating...</b>")
             await asyncio.sleep(1)
