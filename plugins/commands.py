@@ -378,6 +378,7 @@ async def start(client, message):
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
+        f_caption = f"♻️@MrAK_LinkZz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
@@ -393,6 +394,7 @@ async def start(client, message):
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
+                caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=(
                     InlineKeyboardMarkup(
