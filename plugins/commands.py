@@ -390,15 +390,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            filetype = msg.media
-            file = getattr(msg, filetype.value)
-            title = '♻️@MrAK_LinkZz ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
-            size=get_size(file.file_size)
-            f_caption = f"<code>{title}</code>"
-            if CUSTOM_FILE_CAPTION:
-            
-               f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
-            msg = await client.send_cached_media(f_caption)(
+            msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
@@ -422,7 +414,6 @@ async def start(client, message):
                     )
                )
             )
-        
             await asyncio.sleep(300)
             k = await message.reply_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>", reply_markup=None)
             btn = [[
