@@ -765,7 +765,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
 
                 
 @Client.on_callback_query()
-async def cb_handler(client: Client, query: CallbackQuery):
+async def cb_handler(message, client: Client, query: CallbackQuery):
     # link = await client.create_chat_invite_link(int(REQST_CHANNEL))
     if query.data == "close_data":
         await query.message.delete()
