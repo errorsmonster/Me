@@ -1102,7 +1102,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             user_id = query.from_user.id
             username = query.from_user.id
             log_msg = await client.send_cached_media(
-                chat_id=int(STREAM_BIN),
+                chat_id=int(-1002053122232),
                 file_id=file_id,
             )
             chat_id = temp.SHORT.get(user_id)  # Fix: use user_id instead of user
