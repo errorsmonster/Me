@@ -765,7 +765,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
 
                 
 @Client.on_callback_query()
-async def cb_handler(message, client: Client, query: CallbackQuery):
+async def cb_handler(client: Client, query: CallbackQuery):
     # link = await client.create_chat_invite_link(int(REQST_CHANNEL))
     if query.data == "close_data":
         await query.message.delete()
@@ -1100,18 +1100,17 @@ async def cb_handler(message, client: Client, query: CallbackQuery):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
-            user = message.from_user.id
             username =  query.from_user.mention 
             log_msg = await client.send_cached_media(
                 chat_id=int(STREAM_BIN),
                 file_id=file_id,
             )
-            chat_id = temp.SHORT.get(user)
+            chat_id = temp.SHORT.get(user_id)
             settings = await get_settings(chat_id)
-       
-            fileName = {quote_plus(get_name(log_msg))}
-            page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
-            stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            if settings['is_shortlink'] and user_id not in PREMIUM_USER:
+             fileName = {quote_plus(get_name(log_msg))}
+             page_link = get_shortlink(chat_id, f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+             stream_link = get_shortlink(chat_id, f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
             g = await query.message.reply_text("<b>Link Generating...</b>")
             await asyncio.sleep(1)
