@@ -1036,7 +1036,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         protect_content=True if ident == "filep" else False,
                         reply_markup=InlineKeyboardMarkup(
                             [
-                            [ [
+                            [ 
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
                                 InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
@@ -1044,7 +1044,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             ], [
                                 InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
-                            ]]
+                            ]
                         )
                     )
                 else:
