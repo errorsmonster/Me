@@ -341,7 +341,7 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=(
                     InlineKeyboardMarkup(
-                        
+                        [
                             [
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
@@ -350,6 +350,7 @@ async def start(client, message):
                             ], [
                                 InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
+                        ]
                         
                     )
                     if IS_STREAM
@@ -389,11 +390,12 @@ async def start(client, message):
             )
         )
         # Replying to the initial message
-        reply_message = await botsend.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Lɪɴᴋ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷𝟶 Mɪɴs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Lɪɴᴋ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs OR Yᴏᴜʀ Fʀɪᴇɴᴅs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>", quote=True)
-        await asyncio.sleep(60)
-        if botsend:
+        if botsend:    
+            reply_message = await botsend.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Lɪɴᴋ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷𝟶 Mɪɴs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Lɪɴᴋ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs OR Yᴏᴜʀ Fʀɪᴇɴᴅs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>", quote=True)
+            await asyncio.sleep(60)
+        
             await botsend.delete()
-        await reply_message.edit_text("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
+            await reply_message.edit_text("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
                     [
                      [
                         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
@@ -427,7 +429,7 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=(
                     InlineKeyboardMarkup(
-                        
+                        [
                             [
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
@@ -436,6 +438,7 @@ async def start(client, message):
                             ], [
                                 InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
+                        ]
                         
                     )
                     if IS_STREAM
@@ -489,7 +492,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         reply_markup=(
                     InlineKeyboardMarkup(
-                        
+                        [
                             [
                                 InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
                             ],[
@@ -498,6 +501,7 @@ async def start(client, message):
                             ], [
                                 InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
+                        ]
                         
                     )
                     )
