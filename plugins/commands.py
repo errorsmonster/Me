@@ -398,13 +398,13 @@ async def start(client, message):
             await asyncio.sleep(60)
             await k.edit("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
                     [
-                     [[
+                     [
                         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                         InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                      ], [
                         InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                      ]
-                    ]]
+                    ]
                 )
             )
             return
