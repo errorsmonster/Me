@@ -1123,7 +1123,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [[
+                    [
                         InlineKeyboardButton("Fast Download ⚡", url=stream_link),
                         InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)
                     ],[          
@@ -1132,14 +1132,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ], [
                         InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
-                            ]])
+                            ])
                             )
             return await query.message.reply_text(
                 text="<b>Sᴛʀᴇᴀᴍ Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ...😁</b>",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [[
+                    [
                         InlineKeyboardButton("Fast Download ⚡", url=stream_link),
                         InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)
                     ],[          
@@ -1148,7 +1148,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ], [
                         InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
                             ]
-                            ]])
+                            ])
                             )
         except Exception as e:
             print(e)  # print the error message
