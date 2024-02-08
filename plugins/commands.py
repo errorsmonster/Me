@@ -291,7 +291,7 @@ async def start(client, message):
                     ]
             )
         )
-        await asyncio.sleep(600)
+        await asyncio.sleep(60)
         await k.edit("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
                 [
                 [
@@ -395,7 +395,7 @@ async def start(client, message):
                     ]
                 )
             )
-            await asyncio.sleep(600)
+            await asyncio.sleep(60)
             await k.edit("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
                     [
                      [[
