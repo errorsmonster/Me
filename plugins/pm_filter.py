@@ -1037,8 +1037,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup(
                             [
                              [
-                              InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}')
-                             ]
+                                InlineKeyboardButton('🌈 Wᴀᴛᴄʜ Oɴʟɪɴᴇ / Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 🌈', callback_data=f'gen_stream_link:{file_id}'),
+                            ],[
+                                InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
+                                InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                            ], [
+                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
+                            ]
                             ]
                         )
                     )
@@ -1095,7 +1100,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"⚜️{files.file_name}"
         await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-    
+
     elif query.data.startswith("gen_stream_link"):
         _, file_id = query.data.split(":")
         try:
@@ -1106,8 +1111,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 file_id=file_id,
             )
             fileName = {quote_plus(get_name(log_msg))}
-            page_link = await get_shortlink(f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
-            stream_link = await get_shortlink(f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            page_link = f"{STREAM_URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            stream_link = f"{STREAM_URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
             g = await query.message.reply_text("<b>Link Generating...</b>")
             await asyncio.sleep(1)
@@ -1117,14 +1122,34 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"Usᴇʀ ID: {user_id}\n\nUsᴇʀ Nᴀᴍᴇ: {username} 𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞: {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
-                                                    InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)]]))
+                reply_markup=InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton("Fast Download ⚡", url=stream_link),
+                        InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)
+                    ],[          
+                        InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
+                        InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    ], [
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
+                            ]
+                            ])
+                            )
             return await query.message.reply_text(
                 text="<b>Sᴛʀᴇᴀᴍ Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ...😁</b>",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download ⚡", url=stream_link),
-                                                    InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)]]))
+                reply_markup=InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton("Fast Download ⚡", url=stream_link),
+                        InlineKeyboardButton('🎥 Stream/Watch online', url=page_link)
+                    ],[          
+                        InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
+                        InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    ], [
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url=GRP_LNK)
+                            ]
+                            ])
+                            )
         except Exception as e:
             print(e)  # print the error message
             await query.answer(f"☣something went wrong. Check error:\n\n{e}", show_alert=True)
