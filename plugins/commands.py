@@ -373,6 +373,7 @@ async def start(client, message):
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
+        botsend = None
         if settings['is_shortlink'] and user not in PREMIUM_USER:
             files_ = await get_file_details(file_id)
             files = files_[0]
@@ -390,7 +391,8 @@ async def start(client, message):
         # Replying to the initial message
         reply_message = await botsend.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Lɪɴᴋ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷𝟶 Mɪɴs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Lɪɴᴋ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs OR Yᴏᴜʀ Fʀɪᴇɴᴅs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>", quote=True)
         await asyncio.sleep(60)
-        await botsend.delete()
+        if botsend:
+            await botsend.delete()
         await reply_message.edit_text("<b>Your Your message is successfully deleted!!!</b>", InlineKeyboardMarkup(
                     [
                      [
