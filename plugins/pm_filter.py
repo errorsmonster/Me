@@ -1520,7 +1520,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
-                  ]]
+                  ], [
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                    ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
