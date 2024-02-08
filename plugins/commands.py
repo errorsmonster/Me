@@ -53,7 +53,7 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
                   ], [
-                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -104,7 +104,7 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
                   ], [
-                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                     ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -290,7 +290,7 @@ async def start(client, message):
                         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                         InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                     ], [
-                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                     ]
                     ]
             )
@@ -302,7 +302,7 @@ async def start(client, message):
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ], [
-                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                 ]
             ]
                 )
@@ -354,7 +354,7 @@ async def start(client, message):
                                 InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                                 InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                             ], [
-                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                             ]
                         ]
                         
@@ -394,7 +394,7 @@ async def start(client, message):
                         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                         InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                     ], [
-                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                     ]
                     ]
                 )
@@ -406,7 +406,7 @@ async def start(client, message):
                         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                         InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                      ], [
-                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                        InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                      ]
                     ]
                 )
@@ -441,7 +441,7 @@ async def start(client, message):
                                 InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                                 InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                             ], [
-                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                             ]
                         ]
                         
@@ -462,7 +462,7 @@ async def start(client, message):
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ], [
-                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                 ]]
             k = await msg.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Fɪʟᴇ/Vɪᴅᴇᴏ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 12 ʜᴏᴜʀs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ/Vɪᴅᴇᴏ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>",quote=True)
             await asyncio.sleep(43200)
@@ -509,7 +509,7 @@ async def start(client, message):
                                 InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                                 InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                             ], [
-                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                                InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                             ]
                         ]
                         
@@ -522,7 +522,7 @@ async def start(client, message):
                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ], [
-                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/I_Am_MrAK_bot")
+                    InlineKeyboardButton('𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜', url= "https://t.me/MrAK_LinkZ_bot")
                 ]]
     k = await msg.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Fɪʟᴇ/Vɪᴅᴇᴏ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷2 ʜᴏᴜʀs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ/Vɪᴅᴇᴏ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>",quote=True)
     await asyncio.sleep(43200)
