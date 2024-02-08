@@ -209,7 +209,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 ⚙️ sɪᴢᴇ : {file_size}"""
 
     CAPTION = """
-<b>[{file_name}]</b>
+<b>{file_name}</b>
 <b>⚙️ sɪᴢᴇ : {file_size}</b>
 
 <b>
