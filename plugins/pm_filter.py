@@ -1153,14 +1153,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except Exception as e:
             print(e)  # print the error message
             await query.answer(f"☣something went wrong. Check error:\n\n{e}", show_alert=True)
-            await asyncio.sleep(60)
-            try:
-            # Check if the message exists before attempting to delete it
-                if query.message:
-                    await query.message.delete()
-            except pyrogram.errors.exceptions.bad_request_400.MessageIdInvalid:
-                pass  # Message has already been deleted, ignore the exception
-        
             return
         return
     
