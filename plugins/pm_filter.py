@@ -248,13 +248,10 @@ async def next_page(bot, query):
             cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     try:
-        await query.message.edit_media(
-            media=InputMediaPhoto(NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-    )
+        await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
     except MessageNotModified:
         pass
-
-    await query.answer(text="", show_alert=False, cache_time=0)
+    await query.answer() 
  
 @Client.on_callback_query(filters.regex(r"^spol"))
 async def advantage_spoll_choker(bot, query):
