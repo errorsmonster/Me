@@ -2319,7 +2319,8 @@ async def auto_filter(client, msg, spoll=False):
 
     if imdb and imdb.get('poster'):
         try:
-            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            photo_url = imdb.get('poster')
+            hehe = await message.reply_photo(photo=photo_url, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await m.delete()
             try:
                 if settings['auto_delete']:
@@ -2332,9 +2333,8 @@ async def auto_filter(client, msg, spoll=False):
                 await hehe.delete()
                 await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
-            poster = pic.replace('.jpg', "._V1_UX360.jpg") 
-            hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            poster_url = photo_url.replace('.jpg', "._V1_UX360.jpg") 
+            hmm = await message.reply_photo(photo=poster_url, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await m.delete()
             try:
                if settings['auto_delete']:
@@ -2375,8 +2375,8 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
-    # if spoll:
-    #     await msg.message.delete()
+     if spoll:
+         await msg.message.delete()
     
 
 async def advantage_spell_chok(client, msg):
